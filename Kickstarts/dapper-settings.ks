@@ -49,7 +49,7 @@ FOE
 # ---------------------------------------------
 
 cat >> /usr/share/glib-2.0/schemas/org.gnome.gedit.preferences.editor.gschema.override << FOE
-[org.gnome.gedit.perferences.editor]
+[org.gnome.gedit.preferences.editor]
 auto-indent=true
 auto-save=true
 auto-save-interval=5
@@ -115,11 +115,15 @@ old-files-age=1
 report-technical-problems=false
 FOE
 
+# Set most as Manpage Provider for Colour Manpages
+
+cat >> /home/liveuser/.bashrc << FOE
+export MANPAGER="/usr/bin/most -s"
+FOE
+
 # ---------------------------------------------
 # Shell
 # ---------------------------------------------
-
-# Delete Upstream Fedora's Settings
 
 # Set Our Favourite Apps for Gnome-Shell and Enable Extensions
 
