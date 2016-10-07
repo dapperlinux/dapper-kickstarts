@@ -39,9 +39,20 @@ FOE
 
 # Evince Uses Inverted Colours by Default
 
-cat >> /usr/share/glib-2.0/schemas/org.gnome.evince.default.gschema.override << FOE
+cat >> /usr/share/glib-2.0/schemas/org.gnome.Evince.Default.gschema.override << FOE
 [org.gnome.Evince.Default]
 inverted-colors=true
+FOE
+
+# ---------------------------------------------
+# Eog
+# ---------------------------------------------
+
+# EOG Hide Sidebar
+
+cat >> /usr/share/glib-2.0/schemas/org.gnome.eog.ui.gschema.override << FOE
+[org.gnome.eog.ui]
+sidebar=false
 FOE
 
 # ---------------------------------------------

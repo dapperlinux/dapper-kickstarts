@@ -100,15 +100,11 @@ dapper-dark
 # Oz Sandbox
 #dapper-oz
 
-# Temporary Unitl Branding is Established
-#generic-logos
-#generic-release
-#generic-release-notes
-
 # Add Dapper Linux Branding
-#dapper-logos
-#dapper-release
-#dapper-release-notes
+dapper-logos
+dapper-logos-httpd
+dapper-release
+dapper-release-notes
 
 
 # ---------------------------------------------
@@ -116,9 +112,10 @@ dapper-dark
 # ---------------------------------------------
 
 # Remove Upstream Branding Per Remix Regulations
-#-fedora-logos
-#-fedora-release
-#-fedora-release-notes
+-fedora-logos
+-fedora-logos-httpd
+-fedora-release
+-fedora-release-notes
 
 -cheese
 -evolution
@@ -126,7 +123,6 @@ dapper-dark
 -gnome-contacts
 -gnome-documents
 -gnome-maps
--gnome-software
 -gnome-weather
 -rhythmbox
 -shotwell
