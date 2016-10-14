@@ -101,6 +101,7 @@ dapper-dark
 #dapper-oz
 
 # Add Dapper Linux Branding
+dapper-backgrounds-gnome
 dapper-logos
 dapper-logos-httpd
 dapper-release
@@ -112,6 +113,7 @@ dapper-release-notes
 # ---------------------------------------------
 
 # Remove Upstream Branding Per Remix Regulations
+-f24-backgrounds-gnome
 -fedora-logos
 -fedora-logos-httpd
 -fedora-release

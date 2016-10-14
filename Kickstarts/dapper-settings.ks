@@ -107,6 +107,18 @@ FOE
 # Desktop
 # ---------------------------------------------
 
+# Set the Desktop and Lock Screen Backgrounds
+
+cat >> /usr/share/glib-2.0/schemas/org.gnome.desktop.background.gschema.override << FOE
+[org.gnome.desktop.background]
+picture-uri='file:///usr/share/backgrounds/dapperlinux/default/ultrahd/dapperlinux.png'
+FOE
+
+cat >> /usr/share/glib-2.0/schemas/org.gnome.desktop.screensaver.gschema.override << FOE
+[org.gnome.desktop.screensaver]
+picture-uri='file:///usr/share/backgrounds/dapperlinux/default/ultrahd/dapperlinux.png'
+FOE
+
 # Change Desktop And Theme Settings
 
 cat >> /usr/share/glib-2.0/schemas/org.gnome.desktop.interface.gschema.override << FOE
@@ -131,6 +143,12 @@ FOE
 cat >> /home/liveuser/.bashrc << FOE
 export MANPAGER="/usr/bin/most -s"
 FOE
+
+# Set Anaconda Branding
+
+old_icon='Icon=anaconda'
+new_icon='Icon=/usr/share/icons/Fedora/scalable/apps/anaconda.svg'
+sed -i "s%$old_icon%$new_icon%g" /usr/share/applications/anaconda.desktop
 
 # ---------------------------------------------
 # Shell
