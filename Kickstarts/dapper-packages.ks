@@ -87,9 +87,9 @@ x264
 # Grsec Hardened Kernel
 
 #dapper-kernel-grsec
-#dapper-kernel-core-grsec
-#dapper-kernel-modules-grsec
-#dapper-kernel-modules-extra-grsec
+#dapper-kernel-grsec-core
+#dapper-kernel-grsec-modules
+#dapper-kernel-grsec-modules-extra
 
 # RBAC Definitions
 #dapper-rbac-def
@@ -106,6 +106,7 @@ dapper-logos
 dapper-logos-httpd
 dapper-release
 dapper-release-notes
+dapper-settings
 
 
 # ---------------------------------------------
@@ -119,6 +120,13 @@ dapper-release-notes
 -fedora-release
 -fedora-release-notes
 
+# Remove Standard Kernel
+#-kernel
+#-kernel-core
+#-kernel-modules
+#-kernel-modules-extra
+
+# Remove Unnecessary packages
 -cheese
 -evolution
 -gnome-clocks

@@ -119,6 +119,18 @@ cat >> /usr/share/glib-2.0/schemas/org.gnome.desktop.screensaver.gschema.overrid
 picture-uri='file:///usr/share/backgrounds/dapperlinux/default/ultrahd/dapperlinux.png'
 FOE
 
+# Ensure Mouse Scrolling is Correct
+
+cat >> /usr/share/glib-2.0/schemas/org.gnome.desktop.peripherals.mouse.gschema.override << FOE
+[org.gnome.desktop.peripherals.mouse]
+natural-scroll=false
+FOE
+
+cat >> /usr/share/glib-2.0/schemas/org.gnome.desktop.peripherals.touchpad.gschema.override << FOE
+[org.gnome.desktop.peripherals.touchpad]
+natural-scroll=false
+FOE
+
 # Change Desktop And Theme Settings
 
 cat >> /usr/share/glib-2.0/schemas/org.gnome.desktop.interface.gschema.override << FOE
