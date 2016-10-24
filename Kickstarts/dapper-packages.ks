@@ -55,6 +55,9 @@ lyx
 # Non Free Extensions (RPM Fusion)
 # ---------------------------------------------
 
+# RPM Fusion Repos
+rpmfusion-free-release
+rpmfusion-nonfree-release
 
 # Fonts
 freetype-freeworld
@@ -85,7 +88,6 @@ x264
 # ---------------------------------------------
 
 # Grsec Hardened Kernel
-
 #dapper-kernel-grsec
 #dapper-kernel-grsec-core
 #dapper-kernel-grsec-modules
@@ -106,6 +108,7 @@ dapper-logos
 dapper-logos-httpd
 dapper-release
 dapper-release-notes
+dapper-repos
 dapper-settings
 
 
@@ -119,6 +122,7 @@ dapper-settings
 -fedora-logos-httpd
 -fedora-release
 -fedora-release-notes
+-fedora-repos
 
 # Remove Standard Kernel
 #-kernel
