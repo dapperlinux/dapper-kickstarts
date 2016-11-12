@@ -93,6 +93,11 @@ x264
 #dapper-kernel-grsec-modules
 #dapper-kernel-grsec-modules-extra
 
+# Pax Tools
+paxctl
+paxtest
+#paxrat
+
 # RBAC Definitions
 #dapper-rbac-def
 
@@ -110,6 +115,9 @@ dapper-release
 dapper-release-notes
 dapper-repos
 dapper-settings
+
+# Hardened Firefox
+firefox-hardened
 
 
 # ---------------------------------------------

@@ -5,7 +5,7 @@
 #!/bin/bash
 
 # Variables
-version=24
+version=25
 location=./Kickstarts/dapper-live.ks
 flatfile=./Kickstarts/dapper-live-flat.ks
 builddir=/var/dapper
