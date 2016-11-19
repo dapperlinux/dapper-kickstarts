@@ -120,6 +120,9 @@ dapper-settings
 # Hardened Firefox
 firefox-hardened
 
+# Mediaplayer Extension
+gnome-shell-extensions-mediaplayer
+
 
 # ---------------------------------------------
 # Packages to Remove
