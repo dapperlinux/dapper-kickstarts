@@ -95,6 +95,7 @@ x264
 
 # Pax Tools
 paxctl
+paxctld-systemd
 paxtest
 #paxrat
 

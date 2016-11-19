@@ -163,6 +163,22 @@ new_icon='Icon=/usr/share/icons/Fedora/scalable/apps/anaconda.svg'
 sed -i "s%$old_icon%$new_icon%g" /usr/share/applications/anaconda.desktop
 
 # ---------------------------------------------
+# Shell Extensions
+# ---------------------------------------------
+
+# Mediaplayer Settings
+
+cat >> /usr/share/glib-2.0/schemas/org.gnome.shell.extensions.mediaplayer.gschema.override << FOE
+[org.gnome.shell.extensions.mediaplayer]
+indicator-position='right'
+position=true
+status-size=300
+status-text='{trackTitle} - {trackArtist}'
+volume=false
+FOE
+
+
+# ---------------------------------------------
 # Shell
 # ---------------------------------------------
 
@@ -170,8 +186,8 @@ sed -i "s%$old_icon%$new_icon%g" /usr/share/applications/anaconda.desktop
 
 cat >> /usr/share/glib-2.0/schemas/org.gnome.shell.gschema.override << FOE
 [org.gnome.shell]
-enabled-extensions=['user-theme@gnome-shell-extensions.gcampax.github.com']
-favorite-apps=['firefox.desktop', 'mozilla-thunderbird.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.gedit.desktop', 'org.gnome.Terminal.desktop', 'gnome-music.desktop', 'liferea.desktop', 'anaconda.desktop']
+enabled-extensions=['user-theme@gnome-shell-extensions.gcampax.github.com', 'mediaplayer@patapon.info']
+favorite-apps=['firefox-hardened.desktop', 'firefox.desktop', 'mozilla-thunderbird.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.gedit.desktop', 'org.gnome.Terminal.desktop', 'gnome-music.desktop', 'liferea.desktop', 'anaconda.desktop']
 FOE
 
 # Set Custom Shell Theme
