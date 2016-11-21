@@ -22,6 +22,7 @@ thunderbird
 transmission
 
 # Terminal Applications
+ack
 cowsay
 fortune-mod
 elinks
