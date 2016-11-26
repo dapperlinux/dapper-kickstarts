@@ -115,6 +115,7 @@ dapper-logos
 dapper-logos-httpd
 dapper-release
 dapper-release-notes
+dapper-release-workstation
 dapper-repos
 dapper-settings
 
@@ -135,6 +136,7 @@ gnome-shell-extensions-mediaplayer
 -fedora-logos-httpd
 -fedora-release
 -fedora-release-notes
+-fedora-release-workstation
 -fedora-repos
 
 # Remove Standard Kernel
