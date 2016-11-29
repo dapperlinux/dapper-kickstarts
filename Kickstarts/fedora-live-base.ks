@@ -16,8 +16,8 @@ firewall --enabled --service=mdns
 xconfig --startxonboot
 zerombr
 clearpart --all
-part / --size 5120 --fstype ext4
-services --enabled=NetworkManager,ModemManager --disabled=network,sshd
+part / --size 8000 --fstype ext4
+services --enabled=NetworkManager,ModemManager --disabled=sshd
 network --bootproto=dhcp --device=link --activate
 shutdown
 
@@ -214,7 +214,9 @@ touch /.liveimg-configured
 
 # add static hostname to work around xauth bug
 # https://bugzilla.redhat.com/show_bug.cgi?id=679486
-echo "localhost" > /etc/hostname
+# the hostname must be something else than 'localhost'
+# https://bugzilla.redhat.com/show_bug.cgi?id=1370222
+echo "localhost-live" > /etc/hostname
 
 EOF
 
@@ -321,6 +323,14 @@ echo 'File created by kickstart. See systemd-update-done.service(8).' \
 # See bug 1317709
 rm -f /boot/*-rescue*
 
+# Disable network service here, as doing it in the services line
+# fails due to RHBZ #1369794
+/sbin/chkconfig network off
+
+# Remove machine-id on pre generated images
+rm -f /etc/machine-id
+touch /etc/machine-id
+
 %end
 
 
@@ -332,4 +342,5 @@ if [ "$(uname -i)" = "i386" -o "$(uname -i)" = "x86_64" ]; then
   if [ ! -d $LIVE_ROOT/LiveOS ]; then mkdir -p $LIVE_ROOT/LiveOS ; fi
   cp /usr/bin/livecd-iso-to-disk $LIVE_ROOT/LiveOS
 fi
+
 %end
