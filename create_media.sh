@@ -26,10 +26,10 @@ setenforce 0
 ksflatten --config $location --output $flatfile
 
 # Produce the livecd
-livemedia-creator --ks $flatfile --no-virt --resultdir $builddir --project $name --make-iso --volid $name --iso-only --iso-name $name.iso --releasever $version --title $name --macboot
+livemedia-creator --ks $flatfile --no-virt --resultdir $builddir --project $name --make-iso --volid $name --iso-only --iso-name $name-$version.iso --releasever $version --title $name --macboot
 
 # Get the Livecd 
-cp $builddir/$name.iso .
+cp $builddir/$name-$version.iso .
 
 # Re-Enable SELinux
 setenforce 1

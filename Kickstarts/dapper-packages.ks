@@ -27,10 +27,10 @@ cowsay
 fortune-mod
 elinks
 fuse-sshfs
-livecd-tools
 most
 nasm
 php
+rust
 screenfetch
 strace
 vim-enhanced
@@ -89,16 +89,16 @@ x264
 # ---------------------------------------------
 
 # Grsec Hardened Kernel
-#dapper-kernel-grsec
-#dapper-kernel-grsec-core
-#dapper-kernel-grsec-modules
-#dapper-kernel-grsec-modules-extra
+dapper-kernel-grsec
+dapper-kernel-grsec-core
+dapper-kernel-grsec-modules
+dapper-kernel-grsec-modules-extra
 
 # Pax Tools
+dapper-paxset
 paxctl
 paxctld-systemd
 paxtest
-#paxrat
 
 # RBAC Definitions
 #dapper-rbac-def
@@ -140,10 +140,10 @@ gnome-shell-extensions-mediaplayer
 -fedora-repos
 
 # Remove Standard Kernel
-#-kernel
-#-kernel-core
-#-kernel-modules
-#-kernel-modules-extra
+-kernel
+-kernel-core
+-kernel-modules
+-kernel-modules-extra
 
 # Remove Unnecessary packages
 -cheese
