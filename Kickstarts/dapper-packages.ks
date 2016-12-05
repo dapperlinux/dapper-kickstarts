@@ -125,6 +125,9 @@ firefox-hardened
 # Mediaplayer Extension
 gnome-shell-extensions-mediaplayer
 
+# Interactive Firewall
+application-firewall
+
 
 # ---------------------------------------------
 # Packages to Remove
