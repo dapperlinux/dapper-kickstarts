@@ -19,6 +19,7 @@ liferea
 pdfshuffler
 polari
 thunderbird
+thunderbird-enigmail
 transmission
 
 # Terminal Applications
@@ -107,7 +108,8 @@ paxtest
 dapper-dark
 
 # Oz Sandbox
-#dapper-oz
+oz
+gnome-shell-extension-ozshell
 
 # Add Dapper Linux Branding
 dapper-backgrounds-gnome
