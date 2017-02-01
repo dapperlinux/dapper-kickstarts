@@ -137,7 +137,6 @@ cat >> /usr/share/glib-2.0/schemas/org.gnome.desktop.interface.gschema.override 
 [org.gnome.desktop.interface]
 clock-show-date=true
 gtk-theme="dapper-dark"
-icon-theme="Numix2"
 FOE
 
 # Clean Up Old Temp Files
@@ -157,10 +156,14 @@ export MANPAGER="/usr/bin/most -s"
 FOE
 
 # Set Anaconda Branding
+cp /usr/share/icons/Fedora/scalable/apps/anaconda.svg /usr/share/icons/Adwaita/scalable/apps/
+sed -i "s%Icon=anaconda%Icon=/usr/share/icons/Fedora/scalable/apps/anaconda.svg%g" /usr/share/applications/anaconda.desktop
 
-old_icon='Icon=anaconda'
-new_icon='Icon=/usr/share/icons/Fedora/scalable/apps/anaconda.svg'
-sed -i "s%$old_icon%$new_icon%g" /usr/share/applications/anaconda.desktop
+# ---------------------------------------------
+# Oz
+# ---------------------------------------------
+mkdir -p /media/liveuser
+usermod -aG xpra liveuser
 
 # ---------------------------------------------
 # Shell Extensions

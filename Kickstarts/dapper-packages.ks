@@ -109,6 +109,7 @@ dapper-dark
 
 # Oz Sandbox
 oz
+dapper-oz-profiles
 gnome-shell-extension-ozshell
 
 # Add Dapper Linux Branding
