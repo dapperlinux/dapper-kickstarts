@@ -137,6 +137,7 @@ cat >> /usr/share/glib-2.0/schemas/org.gnome.desktop.interface.gschema.override 
 [org.gnome.desktop.interface]
 clock-show-date=true
 gtk-theme="dapper-dark"
+icon-theme="Numix-Circle"
 FOE
 
 # Clean Up Old Temp Files

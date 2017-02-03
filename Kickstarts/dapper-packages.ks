@@ -10,6 +10,7 @@ gconf-editor
 gnome-tweak-tool
 gtk-murrine-engine
 system-config-printer
+numix-icon-theme-circle
 
 # Graphical Applications
 gimp
@@ -137,7 +138,7 @@ application-firewall
 # ---------------------------------------------
 
 # Remove Upstream Branding Per Remix Regulations
--f24-backgrounds-gnome
+-f25-backgrounds-gnome
 -fedora-logos
 -fedora-logos-httpd
 -fedora-release
@@ -154,6 +155,9 @@ application-firewall
 # Remove Unnecessary packages
 -cheese
 -evolution
+-evolution-ews
+-evolution-help
+-gnome-calendar
 -gnome-clocks
 -gnome-contacts
 -gnome-documents
