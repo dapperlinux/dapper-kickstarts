@@ -132,6 +132,9 @@ gnome-shell-extensions-mediaplayer
 # Interactive Firewall
 application-firewall
 
+# Selinux Policy
+dapper-selinux-policy
+
 
 # ---------------------------------------------
 # Packages to Remove

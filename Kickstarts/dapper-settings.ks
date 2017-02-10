@@ -34,6 +34,17 @@ geometry="704x402+23+15"
 FOE
 
 # ---------------------------------------------
+# GTK
+# ---------------------------------------------
+
+# Sort Folders Before Icons
+
+cat >> $buildroot$datadir/glib-2.0/schemas/org.gtk.settings.file-chooser.gschema.override << FOE
+[org.gtk.Settings.FileChooser]
+sort-directories-first=true
+FOE
+
+# ---------------------------------------------
 # Evince
 # ---------------------------------------------
 
@@ -160,11 +171,15 @@ FOE
 cp /usr/share/icons/Fedora/scalable/apps/anaconda.svg /usr/share/icons/Adwaita/scalable/apps/
 sed -i "s%Icon=anaconda%Icon=/usr/share/icons/Fedora/scalable/apps/anaconda.svg%g" /usr/share/applications/anaconda.desktop
 
+# Fix Nautilus Icon
+ln -sf /usr/share/icons/Numix-Circle/48/apps/file-manager.svg /usr/share/icons/Numix-Circle/48/apps/org.gnome.Nautilus.svg
+
 # ---------------------------------------------
 # Oz
 # ---------------------------------------------
 mkdir -p /media/liveuser
 usermod -aG xpra liveuser
+mkdir -p /run/resolvconf
 
 # ---------------------------------------------
 # Shell Extensions
