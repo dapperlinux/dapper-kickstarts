@@ -14,6 +14,7 @@ numix-icon-theme-circle
 
 # Graphical Applications
 gimp
+gnome-builder
 gnome-music
 inkscape
 liferea
@@ -29,6 +30,7 @@ cowsay
 fortune-mod
 elinks
 fuse-sshfs
+golang
 most
 nasm
 php

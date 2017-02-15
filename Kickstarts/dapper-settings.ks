@@ -161,6 +161,13 @@ old-files-age=1
 report-technical-problems=false
 FOE
 
+# Set date and time correctly when internet access is present
+
+cat >> $buildroot$datadir/glib-2.0/schemas/org.gnome.desktop.datetime.gschema.override << FOE
+[org.gnome.desktop.datetime]
+automatic-timezone=true
+FOE
+
 # Set most as Manpage Provider for Colour Manpages
 
 cat >> /home/liveuser/.bashrc << FOE
@@ -168,10 +175,12 @@ export MANPAGER="/usr/bin/most -s"
 FOE
 
 # Set Anaconda Branding
+
 cp /usr/share/icons/Fedora/scalable/apps/anaconda.svg /usr/share/icons/Adwaita/scalable/apps/
 sed -i "s%Icon=anaconda%Icon=/usr/share/icons/Fedora/scalable/apps/anaconda.svg%g" /usr/share/applications/anaconda.desktop
 
 # Fix Nautilus Icon
+
 ln -sf /usr/share/icons/Numix-Circle/48/apps/file-manager.svg /usr/share/icons/Numix-Circle/48/apps/org.gnome.Nautilus.svg
 
 # ---------------------------------------------
