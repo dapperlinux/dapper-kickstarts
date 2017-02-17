@@ -45,6 +45,17 @@ sort-directories-first=true
 FOE
 
 # ---------------------------------------------
+# Builder
+# ---------------------------------------------
+cat >> $buildroot$datadir/glib-2.0/schemas/org.gnome.builder.editor.gschema.override << FOE
+[org.gnome.builder.editor]
+highlight-matching-brackets=true
+show-grid-lines=false
+show-map=true
+style-scheme-name="classic"
+FOE
+
+# ---------------------------------------------
 # Evince
 # ---------------------------------------------
 
