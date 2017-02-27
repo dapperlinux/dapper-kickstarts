@@ -194,6 +194,9 @@ sed -i "s%Icon=anaconda%Icon=/usr/share/icons/Fedora/scalable/apps/anaconda.svg%
 
 ln -sf /usr/share/icons/Numix-Circle/48/apps/file-manager.svg /usr/share/icons/Numix-Circle/48/apps/org.gnome.Nautilus.svg
 
+# Fix anaconda by allowing root to view /proc
+usermod -aG proc_access root
+
 # ---------------------------------------------
 # Oz
 # ---------------------------------------------

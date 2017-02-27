@@ -22,7 +22,7 @@ pdfshuffler
 polari
 thunderbird
 thunderbird-enigmail
-transmission
+transmission-gtk
 
 # Terminal Applications
 ack
