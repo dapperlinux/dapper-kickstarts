@@ -125,8 +125,8 @@ dapper-release-workstation
 dapper-repos
 dapper-settings
 
-# Hardened Firefox
-firefox-hardened
+# Hardened Web Browser
+dapper-hardened-browser
 
 # Mediaplayer Extension
 gnome-shell-extensions-mediaplayer
