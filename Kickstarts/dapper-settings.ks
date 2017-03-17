@@ -198,13 +198,6 @@ ln -sf /usr/share/icons/Numix-Circle/48/apps/file-manager.svg /usr/share/icons/N
 usermod -aG proc_access root
 
 # ---------------------------------------------
-# Oz
-# ---------------------------------------------
-mkdir -p /media/liveuser
-usermod -aG xpra liveuser
-mkdir -p /run/resolvconf
-
-# ---------------------------------------------
 # Shell Extensions
 # ---------------------------------------------
 
@@ -294,6 +287,14 @@ FOE
 
 # Rebuild Schema Cache With Any Overrides We Installed
 glib-compile-schemas /usr/share/glib-2.0/schemas
+
+# Set Xorg as Default Gnome Session and Autologin
+cat > /etc/gdm/custom.conf << FOE
+[daemon]
+WaylandEnable=false
+AutomaticLoginEnable=True
+AutomaticLogin=liveuser
+FOE
 
 EOF
 
