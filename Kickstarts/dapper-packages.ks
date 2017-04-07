@@ -6,6 +6,8 @@
 
 # System Applications
 dconf-editor
+dnssec-trigger
+dnssec-trigger-panel
 gconf-editor
 gnome-tweak-tool
 gtk-murrine-engine
@@ -31,6 +33,8 @@ fortune-mod
 elinks
 fuse-sshfs
 golang
+java-1.8.0-openjdk
+java-1.8.0-openjdk-devel
 most
 nasm
 php
