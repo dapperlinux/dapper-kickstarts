@@ -33,8 +33,6 @@ fortune-mod
 elinks
 fuse-sshfs
 golang
-java-1.8.0-openjdk
-java-1.8.0-openjdk-devel
 most
 nasm
 php

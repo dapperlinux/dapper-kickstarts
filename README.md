@@ -45,7 +45,9 @@ Clone the dapper-kickstarts repo:
 ```bash
 $ cd
 $ mkdir -p DapperLinux/Distribution
+$ cd DapperLinux/Distribution
 $ git clone https://github.com/dapperlinux/dapper-kickstarts.git
+$ cd dapper-kickstarts
 $ chmod +x create_media.sh
 ```
 
@@ -54,7 +56,7 @@ If you examine the contents of create_media.sh, you will find it automates every
 ```bash
 $ sudo ./create_media.sh
 ```
-If the build succeeds, an ISO image called Dapper-Linux-Live-25.iso will be placed in the ~/DapperLinux/Distribution folder. If the build fails, read the anaconda logs to find out what went wrong and bugfix as necessary.
+If the build succeeds, an ISO image called Dapper-Linux-Live-25.iso will be placed in the ~/DapperLinux/Distribution/dapper-kickstarts folder. If the build fails, read the anaconda logs to find out what went wrong and bugfix as necessary.
 
 ## Notes
 The build system will likely be moving to a mock based system to match upstream. This will hopefully eliminate the need to create a virtual machine. These instructions will be updated once the buildsystem has been upgraded.
