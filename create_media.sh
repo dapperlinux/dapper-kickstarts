@@ -10,6 +10,7 @@ location=./Kickstarts/dapper-live.ks
 flatfile=./Kickstarts/dapper-live-flat.ks
 builddir=/var/dapper
 name=Dapper-Linux-Live
+DATE=`date +%Y-%m-%d`
 
 # Remove Previous Logfiles
 rm livemedia.log
@@ -26,10 +27,10 @@ setenforce 0
 ksflatten --config $location --output $flatfile
 
 # Produce the livecd
-livemedia-creator --ks $flatfile --no-virt --resultdir $builddir --project $name --make-iso --volid $name --iso-only --iso-name $name-$version.iso --releasever $version --title $name --macboot
+livemedia-creator --ks $flatfile --no-virt --resultdir $builddir --project $name --make-iso --volid $name --iso-only --iso-name $name-$version-$DATE.iso --releasever $version --title $name --macboot
 
 # Get the Livecd 
-cp $builddir/$name-$version.iso .
+cp $builddir/$name-$version-$DATE.iso .
 
 # Re-Enable SELinux
 setenforce 1

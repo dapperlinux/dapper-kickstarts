@@ -8,6 +8,7 @@
 dconf-editor
 dnssec-trigger
 dnssec-trigger-panel
+firewall-config
 gconf-editor
 gnome-tweak-tool
 gtk-murrine-engine
@@ -33,6 +34,8 @@ fortune-mod
 elinks
 fuse-sshfs
 golang
+java-1.8.0-openjdk
+java-1.8.0-openjdk-devel
 most
 nasm
 php
