@@ -28,9 +28,9 @@ FOE
 
 cat >> /usr/share/glib-2.0/schemas/org.gnome.nautilus.window-state.gschema.override << FOE
 [org.gnome.nautilus.window-state]
-start-with-sidebar=false
+start-with-sidebar=true
 maximized=false
-geometry="704x402+23+15"
+geometry="888x457+41+106"
 FOE
 
 # ---------------------------------------------
@@ -87,7 +87,7 @@ auto-indent=true
 auto-save=true
 auto-save-interval=5
 bracket-matching=true
-create-backup-copy=true
+create-backup-copy=false
 display-line-numbers=true
 display-overview-map=true
 display-right-margin=true

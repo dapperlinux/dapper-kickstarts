@@ -120,6 +120,7 @@ dapper-dark
 oz
 dapper-oz-profiles
 gnome-shell-extension-ozshell
+oztool
 
 # Add Dapper Linux Branding
 dapper-backgrounds-gnome
