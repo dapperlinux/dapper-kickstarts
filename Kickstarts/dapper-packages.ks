@@ -30,8 +30,8 @@ transmission-gtk
 # Terminal Applications
 ack
 cowsay
-fortune-mod
 elinks
+fortune-mod
 fuse-sshfs
 golang
 java-1.8.0-openjdk

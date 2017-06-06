@@ -34,3 +34,7 @@ cp $builddir/$name-$version-$DATE.iso .
 
 # Re-Enable SELinux
 setenforce 1
+
+# Generate CheckSums
+openssl sha1 $name-$version-$DATE.iso > $name-$version-$DATE.iso.sha1.txt
+openssl sha256 $name-$version-$DATE.iso > $name-$version-$DATE.iso.sha256.txt
