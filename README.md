@@ -23,22 +23,6 @@ Install the necessary dependancies to build:
 $ sudo dnf install livecd-tools spin-kickstarts lorax virt-install libvirt-daemon-config-network pykickstart
 ```
 
-### Enable Repositories
-Dapper Linux pulls in packages from Fedora, rpmfusion and the Dapper Linux copr, all of which need to be enabled in the VM.
-
-#### RPMFusion:
-Enable the RPMFusion free and non-free repos by running:
-
-```bash
-$ su -c 'dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm'
-```
-#### Dapper Linux:
-Enable the Dapper Linux main COPR repository with:
-
-```bash
-$ dnf copr enable dapperlinux/main 
-```
-
 ### Obtain the Kickstart Files
 Clone the dapper-kickstarts repo:
 

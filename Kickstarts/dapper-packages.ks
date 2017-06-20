@@ -20,9 +20,11 @@ gimp
 gnome-builder
 gnome-music
 inkscape
+krita
 liferea
 pdfshuffler
 polari
+scribus
 thunderbird
 thunderbird-enigmail
 transmission-gtk
@@ -41,7 +43,6 @@ nano
 nasm
 php
 rust
-screenfetch
 strace
 vim-enhanced
 @c-development
@@ -130,6 +131,7 @@ dapper-release
 dapper-release-notes
 dapper-release-workstation
 dapper-repos
+dapper-screenfetch
 dapper-settings
 
 # Hardened Web Browser
