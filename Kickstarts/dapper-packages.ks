@@ -69,7 +69,6 @@ lyx
 
 # RPM Fusion Repos
 rpmfusion-free-release
-rpmfusion-nonfree-release
 
 # Fonts
 freetype-freeworld
