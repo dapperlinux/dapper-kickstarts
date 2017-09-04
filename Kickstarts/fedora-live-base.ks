@@ -16,9 +16,10 @@ firewall --enabled --service=mdns
 xconfig --startxonboot
 zerombr
 clearpart --all
-part / --size 8700 --fstype ext4
+part / --size 9000 --fstype ext4
 services --enabled=NetworkManager,ModemManager --disabled=sshd
 network --bootproto=dhcp --device=link --activate
+rootpw --lock --iscrypted locked
 shutdown
 
 %include fedora-repo.ks

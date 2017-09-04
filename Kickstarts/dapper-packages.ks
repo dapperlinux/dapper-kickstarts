@@ -12,10 +12,12 @@ firewall-config
 gconf-editor
 gnome-tweak-tool
 gtk-murrine-engine
-system-config-printer
 numix-icon-theme-circle
+system-config-printer
+tor
 
 # Graphical Applications
+calamares
 gimp
 gnome-builder
 gnome-music
@@ -25,12 +27,12 @@ liferea
 pdfshuffler
 polari
 scribus
-thunderbird
-thunderbird-enigmail
+tilix
 transmission-gtk
 
 # Terminal Applications
 ack
+chkrootkit
 cowsay
 elinks
 fortune-mod
@@ -38,12 +40,15 @@ fuse-sshfs
 golang
 java-1.8.0-openjdk
 java-1.8.0-openjdk-devel
+libvpx
 most
 nano
 nasm
 php
+rkhunter
 rust
 strace
+tripwire
 vim-enhanced
 @c-development
 
@@ -151,7 +156,7 @@ dapper-selinux-policy
 # ---------------------------------------------
 
 # Remove Upstream Branding Per Remix Regulations
--f25-backgrounds-gnome
+-f26-backgrounds-gnome
 -fedora-logos
 -fedora-logos-httpd
 -fedora-release
@@ -167,9 +172,6 @@ dapper-selinux-policy
 
 # Remove Unnecessary packages
 -cheese
--evolution
--evolution-ews
--evolution-help
 -gnome-calendar
 -gnome-clocks
 -gnome-contacts
@@ -178,5 +180,9 @@ dapper-selinux-policy
 -gnome-weather
 -rhythmbox
 -shotwell
+
+# Remove Standard Installer
+-anaconda
+-@anaconda-tools
 
 %end

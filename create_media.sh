@@ -5,7 +5,8 @@
 #!/bin/bash
 
 # Variables
-version=25
+project=Fedora
+version=26
 location=./Kickstarts/dapper-live.ks
 flatfile=./Kickstarts/dapper-live-flat.ks
 builddir=/var/dapper
@@ -27,7 +28,7 @@ setenforce 0
 ksflatten --config $location --output $flatfile
 
 # Produce the livecd
-livemedia-creator --ks $flatfile --no-virt --resultdir $builddir --project $name --make-iso --volid $name --iso-only --iso-name $name-$version-$DATE.iso --releasever $version --title $name --macboot
+livemedia-creator --ks $flatfile --no-virt --resultdir $builddir --project $project --make-iso --volid $name --iso-only --iso-name $name-$version-$DATE.iso --releasever $version --title $name --macboot
 
 # Get the Livecd 
 cp $builddir/$name-$version-$DATE.iso .
