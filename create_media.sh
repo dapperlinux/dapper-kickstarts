@@ -5,13 +5,16 @@
 #!/bin/bash
 
 # Variables
-project=Fedora
+project=Dapper-Linux
 version=26
 location=./Kickstarts/dapper-live.ks
 flatfile=./Kickstarts/dapper-live-flat.ks
 builddir=/var/dapper
 name=Dapper-Linux-Live
 DATE=`date +%Y-%m-%d`
+
+# Copy Base Install Class to PyAnaconda Location
+cp dapperlinux.py /usr/lib64/python3.6/site-packages/pyanaconda/installclasses/
 
 # Remove Previous Logfiles
 rm livemedia.log
