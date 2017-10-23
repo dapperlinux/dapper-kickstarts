@@ -13,6 +13,7 @@ gconf-editor
 gnome-tweak-tool
 gtk-murrine-engine
 numix-icon-theme-circle
+seahorse
 system-config-printer
 tor
 
