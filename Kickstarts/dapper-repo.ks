@@ -11,7 +11,7 @@ repo --name="Dapper Linux Main" --baseurl=https://copr-be.cloud.fedoraproject.or
 
 
 # ---------------------------------------------
-# Xpra Beta
+# Xpra
 # ---------------------------------------------
 
 repo --name="Xpra" --baseurl=https://xpra.org/dists/Fedora/$releasever/$basearch/ --cost=11
