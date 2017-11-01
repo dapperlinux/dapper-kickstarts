@@ -1,27 +1,15 @@
-%include fedora-disk-base.ks
+%include fedora-disk-server.ks
 %include dapper-repo.ks
-
-services --enabled=sshd,NetworkManager,chronyd,initial-setup
-
-autopart
 
 %packages
 # ---------------------------------------------
 # Groups to Install
 # ---------------------------------------------
 
-# Default Groups
-# Note Server environment is broken
-#@server-product-environment
-
-@server-product
-@standard
-@headless-management
-@container-management
-@domain-client
--initial-setup-gui
--generic-release*
-
+# Dapper Linux Server Environment
+@^server-product-environment
+@^web-server-environment
+@^infrastructure-environment
 
 # Groups that are in server environment
 @ansible-node
@@ -43,6 +31,10 @@ autopart
 @sql-server
 @printing
 @smb-server
+
+# Needed for Install
+@anaconda-tools
+@platform-vmware
 
 # ---------------------------------------------
 # Adding Dapper Linux Additions
@@ -73,6 +65,8 @@ dapper-screenfetch
 
 # System Applications
 dnssec-trigger
+fail2ban
+fail2ban-systemd
 tor
 
 # Terminal Applications
@@ -95,6 +89,11 @@ vim-enhanced
 -kernel-core
 -kernel-modules
 -kernel-modules-extra
+-kernel-headers
+-kernel-devel*
+-kernel-debug*
+-kernel-tools*
+-kernel-cross*
 
 # Remove upstream branding
 -fedora-release
@@ -104,15 +103,7 @@ vim-enhanced
 -fedora-logos-httpd
 -fedora-repos
 
-%end
-
-%post
-
-# setup systemd to boot to the right runlevel
-echo -n "Setting default runlevel to multiuser text mode"
-rm -f /etc/systemd/system/default.target
-ln -s /lib/systemd/system/multi-user.target /etc/systemd/system/default.target
-echo .
+# Remove branded environments
+-@^custom-environment
 
 %end
-

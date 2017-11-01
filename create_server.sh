@@ -24,7 +24,7 @@ rm -rf updates
 rm -rf work
 
 # Remove Previous Remmanants
-rm -rf $name-$version-*.iso.*
+rm -rf $name-$version-*.iso*
 
 # Disable SELinux Because of Policy Reasons
 setenforce 0
@@ -32,10 +32,14 @@ setenforce 0
 # Flatten the Kickstart files into one
 ksflatten --config $location --output $flatfile
 
-# Produce the iso image
+# Copy Base Install Class to PyAnaconda Location
+mkdir -p work/$variant/$arch/installtree/usr/lib64/python3.6/site-packages/pyanaconda/installclasses/
+cp dapperlinux.py work/$variant/$arch/installtree/usr/lib64/python3.6/site-packages/pyanaconda/installclasses/
+
+# Create ISO image
 pungi --config $flatfile --name $name --family $project --flavor $variant --ver $version --bugurl $bugurl --nosource --nodebuginfo --isfinal
 
-# Get the iso 
+# Get the ISO 
 cp ./$version/$variant/$arch/iso/$name-DVD-$arch-$version.iso .
 mv $name-DVD-$arch-$version.iso $name-$version-$DATE.iso
 
