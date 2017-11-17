@@ -6,7 +6,7 @@
 
 # Variables
 project=Dapper-Linux
-version=26
+version=27
 location=./Kickstarts/dapper-live.ks
 flatfile=./Kickstarts/dapper-live-flat.ks
 builddir=/var/dapper

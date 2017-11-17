@@ -20,10 +20,10 @@ componentName:  auto
 strings:
     productName:         "Dapper Linux"
     shortProductName:    "Dapper Linux"
-    version:             "26 (Penguin)"
-    shortVersion:        "26"
-    versionedName:       "Dapper Linux 26 (Penguin)"
-    shortVersionedName:  "Dapper Linux 26"
+    version:             "27 (Parrot)"
+    shortVersion:        "27"
+    versionedName:       "Dapper Linux 27 (Parrot)"
+    shortVersionedName:  "Dapper Linux 27"
     bootloaderEntryName: "Dapper Linux"
     productUrl:          "https://dapperlinux.com"
     supportUrl:          "https://github.com/dapperlinux/dapper-linux-issues"
@@ -78,7 +78,7 @@ FOE
 
 cat >> /usr/share/glib-2.0/schemas/95_org.gnome.shell.gschema.override << FOE
 [org.gnome.shell]
-enabled-extensions=['user-theme@gnome-shell-extensions.gcampax.github.com', 'mediaplayer@patapon.info', 'firewall@subgraph.com', 'ozshell@subgraph.com']
+enabled-extensions=['user-theme@gnome-shell-extensions.gcampax.github.com', 'mediaplayer@patapon.info']
 favorite-apps=['dapper-hardened-browser.desktop', 'firefox.desktop', 'evolution.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.gedit.desktop', 'com.gexperts.Tilix.desktop', 'gnome-music.desktop', 'net.sourceforge.liferea.desktop', 'calamares.desktop']
 FOE
 

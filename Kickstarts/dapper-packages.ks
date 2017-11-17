@@ -5,7 +5,7 @@
 # ---------------------------------------------
 
 # System Applications
-dconf-editor
+calamares
 dnssec-trigger
 dnssec-trigger-panel
 firewall-config
@@ -15,21 +15,17 @@ gtk-murrine-engine
 numix-icon-theme-circle
 seahorse
 system-config-printer
+tilix
 tor
 
+# Flatpak
+flatpak
+flatpak-builder
+lollypop-portal
+xdg-desktop-portal
+
 # Graphical Applications
-calamares
-gimp
-gnome-builder
-gnome-music
-inkscape
-krita
-liferea
-pdfshuffler
-polari
-scribus
-tilix
-transmission-gtk
+
 
 # Terminal Applications
 ack
@@ -67,7 +63,6 @@ texlive-supertabular
 texlive-textpos
 texlive-titlesec
 texlive-xltxtra
-lyx
 
 # ---------------------------------------------
 # Non Free Extensions (RPM Fusion)
@@ -97,18 +92,17 @@ gstreamer1-plugins-base-tools
 gstreamer1-plugins-good-extras
 gstreamer1-plugins-ugly
 h264enc
-vlc
 x264
 
 # ---------------------------------------------
 # Dapper Linux Packages
 # ---------------------------------------------
 
-# Grsec Hardened Kernel
-dapper-kernel-grsec
-dapper-kernel-grsec-core
-dapper-kernel-grsec-modules
-dapper-kernel-grsec-modules-extra
+# Dappersec Hardened Kernel
+dapper-secure-kernel
+dapper-secure-kernel-core
+dapper-secure-kernel-modules
+dapper-secure-kernel-modules-extra
 
 # Pax Tools
 dapper-paxset
@@ -116,17 +110,8 @@ paxctl
 paxctld-systemd
 paxtest
 
-# RBAC Definitions
-#dapper-rbac-def
-
 # Dark Shell Theme
 dapper-dark
-
-# Oz Sandbox
-oz
-dapper-oz-profiles
-gnome-shell-extension-ozshell
-oztool
 
 # Add Dapper Linux Branding
 dapper-backgrounds-gnome
@@ -136,17 +121,12 @@ dapper-release
 dapper-release-notes
 dapper-release-workstation
 dapper-repos
+dapper-gpg-keys
 dapper-screenfetch
 dapper-settings
 
-# Hardened Web Browser
-dapper-hardened-browser
-
 # Mediaplayer Extension
 gnome-shell-extensions-mediaplayer
-
-# Interactive Firewall
-application-firewall
 
 # Selinux Policy
 dapper-selinux-policy
@@ -185,5 +165,131 @@ dapper-selinux-policy
 # Remove Standard Installer
 -anaconda
 -@anaconda-tools
+
+# Remove Applications to be Replaced with Flatpaks
+
+# Fedora Defaults
+-dleyna-server
+-eog
+-evince
+-evince-nautilus
+-evolution
+-evolution-ews
+-evolution-help
+-@firefox
+-gedit
+-gnome-todo
+-grilo-plugins
+-@libreoffice
+-libreoffice-calc
+-libreoffice-core
+-libreoffice-draw
+-libreoffice-impress
+-libreoffice-writer
+-simple-scan
+-totem
+-totem-nautilus
+
+# Dapper Linux Extras
+-gimp
+-gnome-builder
+-gnome-music
+-inkscape
+-krita
+-liferea
+-lyx
+-pdfshuffler
+-polari
+-scribus
+-transmission-gtk
+-vlc
+
+
+%end
+
+%post
+
+# ---------------------------------------------
+# Flatpak Remotes
+# ---------------------------------------------
+
+# Gnome
+#flatpak remote-add --if-not-exists gnome --from https://sdk.gnome.org/gnome.flatpakrepo
+
+# Kde
+#flatpak remote-add --if-not-exists kdeapps --from https://distribute.kde.org/kdeapps.flatpakrepo
+
+# Flathub
+#flatpak remote-add --if-not-exists flathub --from https://flathub.org/repo/flathub.flatpakrepo
+
+
+# ---------------------------------------------
+# Flatpak Runtimes
+# ---------------------------------------------
+
+# ---------------------------------------------
+# Flatpak Applications
+# ---------------------------------------------
+
+# Dconf Editor
+#flatpak install flathub ca.desrt.dconf-editor
+
+# Evince
+#flatpak install flathub org.gnome.Evince
+
+# Evolution
+
+# Eye of Gnome
+#flatpak install flathub org.gnome.eog
+
+# Firefox
+
+# Gedit
+#flatpak install flathub org.gnome.gedit
+
+# Gimp
+#flatpak install flathub org.gimp.GIMP
+
+# Gnome-Builder
+#flatpak install flathub org.gnome.Builder
+
+# Inkscape
+#flatpak install flathub org.inkscape.Inkscape
+
+# Krita
+#flatpak install kdeapps org.kde.krita
+
+# Libreoffice
+#flatpak install flathub org.libreoffice.LibreOffice
+
+# Liferea
+
+# Lollypop
+#flatpak install flathub org.gnome.Lollypop
+
+# Lyx
+
+# Minetest
+#flatpak install flathub net.minetest.Minetest
+
+# Nautilus
+#flatpak install flathub org.gnome.Nautilus
+
+# Pdfshuffler
+
+# Polari
+#flatpak install flathub org.gnome.Polari
+
+# Scribus
+#flatpak install --from http://drjurf.tk/scribus-flatpak/scribus-nightly.flatpakref
+
+# Totem
+#flatpak install flathub org.gnome.Totem
+
+# Transmission
+#flatpak install flathub com.transmissionbt.Transmission
+
+# VLC
+#flatpak install flathub org.videolan.VLC
 
 %end

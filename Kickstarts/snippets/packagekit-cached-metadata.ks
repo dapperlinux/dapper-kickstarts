@@ -39,8 +39,8 @@ if [ -f /etc/yum.repos.d/fedora-rawhide.repo ] ; then
 fi
 
 # Dapper Linux Repos
-if [ -f /etc/yum.repos.d/dapperlinux-main.repo ] ; then
-  cp -v /etc/yum.repos.d/dapperlinux-main.repo $PK_PREFIX/etc/yum.repos.d/
+if [ -f /etc/yum.repos.d/dapperlinux-Primary.repo ] ; then
+  cp -v /etc/yum.repos.d/dapperlinux-Primary.repo $PK_PREFIX/etc/yum.repos.d/
 fi
 
 
@@ -50,12 +50,6 @@ if [ -f /etc/yum.repos.d/rpmfusion-free.repo ] ; then
 fi
 if [ -f /etc/yum.repos.d/rpmfusion-free-updates.repo ] ; then
   cp -v /etc/yum.repos.d/rpmfusion-free-updates.repo $PK_PREFIX/etc/yum.repos.d/
-fi
-if [ -f /etc/yum.repos.d/rpmfusion-nonfree.repo ] ; then
-  cp -v /etc/yum.repos.d/rpmfusion-nonfree.repo $PK_PREFIX/etc/yum.repos.d/
-fi
-if [ -f /etc/yum.repos.d/rpmfusion-nonfree-updates.repo ] ; then
-  cp -v /etc/yum.repos.d/rpmfusion-nonfree-updates.repo $PK_PREFIX/etc/yum.repos.d/
 fi
 
 

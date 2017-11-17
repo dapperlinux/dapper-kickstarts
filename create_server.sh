@@ -6,7 +6,7 @@
 
 # Variables
 project=Dapper-Linux
-version=26
+version=27
 variant=Server
 name=$project-$variant
 arch=x86_64
