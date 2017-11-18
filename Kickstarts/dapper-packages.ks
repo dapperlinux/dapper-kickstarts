@@ -158,9 +158,11 @@ dapper-selinux-policy
 -gnome-contacts
 -gnome-documents
 -gnome-maps
+-gnome-todo
 -gnome-weather
 -rhythmbox
 -shotwell
+-simple-scan
 
 # Remove Standard Installer
 -anaconda
@@ -178,7 +180,6 @@ dapper-selinux-policy
 -evolution-help
 -@firefox
 -gedit
--gnome-todo
 -grilo-plugins
 -@libreoffice
 -libreoffice-calc
@@ -186,7 +187,6 @@ dapper-selinux-policy
 -libreoffice-draw
 -libreoffice-impress
 -libreoffice-writer
--simple-scan
 -totem
 -totem-nautilus
 
@@ -209,6 +209,12 @@ dapper-selinux-policy
 
 %post
 
+# Really Remove Libreoffice
+dnf remove -y libreoffice-core libreoffice-calc libreoffice-draw libreoffice-impress libreoffice-writer
+
+# DHCP Client info to use hostnames to lookup flatpak remotes
+echo nameserver 8.8.8.8 > /etc/resolv.conf
+
 # ---------------------------------------------
 # Flatpak Remotes
 # ---------------------------------------------
@@ -217,10 +223,10 @@ dapper-selinux-policy
 #flatpak remote-add --if-not-exists gnome --from https://sdk.gnome.org/gnome.flatpakrepo
 
 # Kde
-#flatpak remote-add --if-not-exists kdeapps --from https://distribute.kde.org/kdeapps.flatpakrepo
+flatpak remote-add --if-not-exists kdeapps --from https://distribute.kde.org/kdeapps.flatpakrepo
 
 # Flathub
-#flatpak remote-add --if-not-exists flathub --from https://flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --if-not-exists flathub --from https://flathub.org/repo/flathub.flatpakrepo
 
 
 # ---------------------------------------------
@@ -232,64 +238,64 @@ dapper-selinux-policy
 # ---------------------------------------------
 
 # Dconf Editor
-#flatpak install flathub ca.desrt.dconf-editor
+flatpak install -y flathub ca.desrt.dconf-editor
 
 # Evince
-#flatpak install flathub org.gnome.Evince
+flatpak install -y flathub org.gnome.Evince
 
 # Evolution
 
 # Eye of Gnome
-#flatpak install flathub org.gnome.eog
+flatpak install -y flathub org.gnome.eog
 
 # Firefox
 
 # Gedit
-#flatpak install flathub org.gnome.gedit
+flatpak install -y flathub org.gnome.gedit
 
 # Gimp
-#flatpak install flathub org.gimp.GIMP
+flatpak install -y flathub org.gimp.GIMP
 
 # Gnome-Builder
-#flatpak install flathub org.gnome.Builder
+flatpak install -y flathub org.gnome.Builder
 
 # Inkscape
-#flatpak install flathub org.inkscape.Inkscape
+flatpak install -y flathub org.inkscape.Inkscape
 
 # Krita
-#flatpak install kdeapps org.kde.krita
+flatpak install -y kdeapps org.kde.krita
 
 # Libreoffice
-#flatpak install flathub org.libreoffice.LibreOffice
+flatpak install -y flathub org.libreoffice.LibreOffice
 
 # Liferea
 
 # Lollypop
-#flatpak install flathub org.gnome.Lollypop
+flatpak install -y flathub org.gnome.Lollypop
 
 # Lyx
 
 # Minetest
-#flatpak install flathub net.minetest.Minetest
+flatpak install -y flathub net.minetest.Minetest
 
 # Nautilus
-#flatpak install flathub org.gnome.Nautilus
+flatpak install -y flathub org.gnome.Nautilus
 
 # Pdfshuffler
 
 # Polari
-#flatpak install flathub org.gnome.Polari
+flatpak install -y flathub org.gnome.Polari
 
 # Scribus
-#flatpak install --from http://drjurf.tk/scribus-flatpak/scribus-nightly.flatpakref
+flatpak install -y --from http://drjurf.tk/scribus-flatpak/scribus-nightly.flatpakref
 
 # Totem
-#flatpak install flathub org.gnome.Totem
+flatpak install -y flathub org.gnome.Totem
 
 # Transmission
-#flatpak install flathub com.transmissionbt.Transmission
+flatpak install -y flathub com.transmissionbt.Transmission
 
 # VLC
-#flatpak install flathub org.videolan.VLC
+flatpak install -y flathub org.videolan.VLC
 
 %end
