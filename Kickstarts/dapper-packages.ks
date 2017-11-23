@@ -21,7 +21,6 @@ tor
 # Flatpak
 flatpak
 flatpak-builder
-lollypop-portal
 xdg-desktop-portal
 
 # Graphical Applications
@@ -220,7 +219,7 @@ echo nameserver 8.8.8.8 > /etc/resolv.conf
 # ---------------------------------------------
 
 # Gnome
-#flatpak remote-add --if-not-exists gnome --from https://sdk.gnome.org/gnome.flatpakrepo
+flatpak remote-add --if-not-exists gnome --from https://sdk.gnome.org/gnome.flatpakrepo
 
 # Kde
 flatpak remote-add --if-not-exists kdeapps --from https://distribute.kde.org/kdeapps.flatpakrepo
@@ -228,14 +227,24 @@ flatpak remote-add --if-not-exists kdeapps --from https://distribute.kde.org/kde
 # Flathub
 flatpak remote-add --if-not-exists flathub --from https://flathub.org/repo/flathub.flatpakrepo
 
+# DapperLinux
+#flatpak remote-add --if-not-exists dapperlinux --from https://download.dapperlinux.com/repo/dapperlinux.flatpakrepo
 
 # ---------------------------------------------
 # Flatpak Runtimes
 # ---------------------------------------------
 
+# Gnome Runtimes
+flatpak install gnome org.gnome.Platform 3.26
+flatpak install gnome org.gnome.Sdk 3.26
+
+# KDE Runtimes
+
 # ---------------------------------------------
 # Flatpak Applications
 # ---------------------------------------------
+
+# Dapper Hardened Browser
 
 # Dconf Editor
 flatpak install -y flathub ca.desrt.dconf-editor
@@ -259,6 +268,8 @@ flatpak install -y flathub org.gimp.GIMP
 # Gnome-Builder
 flatpak install -y flathub org.gnome.Builder
 
+# Gnome-Music
+
 # Inkscape
 flatpak install -y flathub org.inkscape.Inkscape
 
@@ -270,16 +281,7 @@ flatpak install -y flathub org.libreoffice.LibreOffice
 
 # Liferea
 
-# Lollypop
-flatpak install -y flathub org.gnome.Lollypop
-
 # Lyx
-
-# Minetest
-flatpak install -y flathub net.minetest.Minetest
-
-# Nautilus
-flatpak install -y flathub org.gnome.Nautilus
 
 # Pdfshuffler
 

@@ -4,8 +4,17 @@
 
 cat >> /etc/rc.d/init.d/livesys << EOF
 
-# Fix anaconda by allowing root to view /proc
-usermod -aG proc_access root
+# The following disable specific grsecurity chroot protection features.
+# This is for the livecd only, in order for the install to succeed.
+# These features are always enabled on standard Dapper Linux installs.
+
+# Fix Calamares use of features that abuse chroots when using LUKS keyfiles
+echo 0 > /proc/sys/kernel/grsecurity/chroot_restrict_nice
+echo 0 > /proc/sys/kernel/grsecurity/chroot_caps
+
+# Fix Calamares use of features that abuse chroots when generating initramfs
+echo 0 > /proc/sys/kernel/grsecurity/chroot_deny_mknod
+echo 0 > /proc/sys/kernel/grsecurity/chroot_deny_chmod
 
 # Set Calamares branding on .desktop file
 sed -i "s%Name=Calamares%Name=Install Dapper Linux%g" /usr/share/applications/calamares.desktop
