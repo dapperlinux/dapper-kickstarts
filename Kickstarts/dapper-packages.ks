@@ -6,6 +6,7 @@
 
 # System Applications
 calamares
+dconf-editor
 dnssec-trigger
 dnssec-trigger-panel
 firewall-config
@@ -245,9 +246,6 @@ flatpak install gnome org.gnome.Sdk 3.26
 # ---------------------------------------------
 
 # Dapper Hardened Browser
-
-# Dconf Editor
-flatpak install -y flathub ca.desrt.dconf-editor
 
 # Evince
 flatpak install -y flathub org.gnome.Evince
