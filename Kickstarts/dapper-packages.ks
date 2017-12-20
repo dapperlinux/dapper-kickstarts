@@ -247,6 +247,9 @@ flatpak install gnome org.gnome.Sdk 3.26
 # Flatpak Applications
 # ---------------------------------------------
 
+# Dapper Dark GTK Theme
+flatpak install -y dapperlinux org.gtk.Gtk3theme.dapper-dark
+
 # Dapper Hardened Browser
 flatpak install -y dapperlinux com.dapperlinux.Dapper-Hardened-Browser
 
