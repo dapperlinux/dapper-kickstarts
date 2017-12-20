@@ -25,7 +25,9 @@ flatpak-builder
 xdg-desktop-portal
 
 # Graphical Applications
-
+liferea
+lyx
+pdfshuffler
 
 # Terminal Applications
 ack
@@ -196,9 +198,9 @@ dapper-selinux-policy
 -gnome-music
 -inkscape
 -krita
--liferea
--lyx
--pdfshuffler
+#-liferea
+#-lyx
+#-pdfshuffler
 -polari
 -scribus
 -transmission-gtk
@@ -229,7 +231,7 @@ flatpak remote-add --if-not-exists kdeapps --from https://distribute.kde.org/kde
 flatpak remote-add --if-not-exists flathub --from https://flathub.org/repo/flathub.flatpakrepo
 
 # DapperLinux
-#flatpak remote-add --if-not-exists dapperlinux --from https://download.dapperlinux.com/repo/dapperlinux.flatpakrepo
+flatpak remote-add --if-not-exists dapperlinux --from https://download.dapperlinux.com/dapperlinux.flatpakrepo
 
 # ---------------------------------------------
 # Flatpak Runtimes
@@ -246,16 +248,19 @@ flatpak install gnome org.gnome.Sdk 3.26
 # ---------------------------------------------
 
 # Dapper Hardened Browser
+flatpak install -y dapperlinux com.dapperlinux.Dapper-Hardened-Browser
 
 # Evince
 flatpak install -y flathub org.gnome.Evince
 
 # Evolution
+flatpak install -y dapperlinux org.gnome.Evolution
 
 # Eye of Gnome
 flatpak install -y flathub org.gnome.eog
 
 # Firefox
+flatpak install -y dapperlinux org.mozilla.Firefox
 
 # Gedit
 flatpak install -y flathub org.gnome.gedit
@@ -267,6 +272,7 @@ flatpak install -y flathub org.gimp.GIMP
 flatpak install -y flathub org.gnome.Builder
 
 # Gnome-Music
+flatpak install -y dapperlinux org.gnome.Music
 
 # Inkscape
 flatpak install -y flathub org.inkscape.Inkscape
@@ -287,7 +293,7 @@ flatpak install -y flathub org.libreoffice.LibreOffice
 flatpak install -y flathub org.gnome.Polari
 
 # Scribus
-flatpak install -y --from http://drjurf.tk/scribus-flatpak/scribus-nightly.flatpakref
+#flatpak install -y --from http://drjurf.tk/scribus-flatpak/scribus-nightly.flatpakref
 
 # Totem
 flatpak install -y flathub org.gnome.Totem
