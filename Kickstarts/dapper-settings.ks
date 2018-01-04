@@ -20,6 +20,19 @@ echo 0 > /proc/sys/kernel/grsecurity/chroot_deny_chmod
 sed -i "s%Name=Calamares%Name=Install Dapper Linux%g" /usr/share/applications/calamares.desktop
 sed -i "s%Icon=calamares%Icon=/usr/share/icons/Fedora/scalable/apps/anaconda.svg%g" /usr/share/applications/calamares.desktop
 
+# Create wsudo, a way for apps running in wayland as root to connect to the xserver
+cat >> /usr/bin/wsudo << FOE
+#!/bin/bash
+xhost +SI:localuser:root
+sudo $1
+FOE
+
+# Make wsudo executable
+chmod +x /usr/bin/wsudo
+
+# Enable Calamares to run on Wayland with wsudo
+sed -i "s%Exec=kdesu /usr/bin/calamares%Exec=wsudo calamares%g" /usr/share/applications/calamares.desktop
+
 # Set branding on Calamares installer
 rm /usr/share/calamares/branding/auto/branding.desc
 cat >> /usr/share/calamares/branding/auto/branding.desc << FOE
