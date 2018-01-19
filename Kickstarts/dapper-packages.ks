@@ -181,6 +181,7 @@ dapper-selinux-policy
 -evolution-help
 -@firefox
 -gedit
+-gnome-calculator
 -grilo-plugins
 -@libreoffice
 -libreoffice-calc
@@ -237,8 +238,6 @@ flatpak remote-add --if-not-exists dapperlinux --from https://download.dapperlin
 flatpak install gnome org.gnome.Platform 3.26
 flatpak install gnome org.gnome.Sdk 3.26
 
-# KDE Runtimes
-
 # ---------------------------------------------
 # Flatpak Applications
 # ---------------------------------------------
@@ -273,6 +272,9 @@ flatpak install -y flathub org.gimp.GIMP
 # Gnome-Builder
 flatpak install -y flathub org.gnome.Builder
 
+# Gnome-Calculator
+flatpak install -y flathub org.gnome.Calculator
+
 # Gnome-Music
 flatpak install -y dapperlinux org.gnome.Music
 
@@ -284,8 +286,6 @@ flatpak install -y flathub org.kde.krita
 
 # Libreoffice
 flatpak install -y flathub org.libreoffice.LibreOffice
-
-# Liferea
 
 # Lyx
 
