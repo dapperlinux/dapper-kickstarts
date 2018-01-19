@@ -25,7 +25,6 @@ flatpak-builder
 xdg-desktop-portal
 
 # Graphical Applications
-liferea
 lyx
 pdfshuffler
 
@@ -193,12 +192,12 @@ dapper-selinux-policy
 -totem-nautilus
 
 # Dapper Linux Extras
+-feedreader
 -gimp
 -gnome-builder
 -gnome-music
 -inkscape
 -krita
-#-liferea
 #-lyx
 #-pdfshuffler
 -polari
@@ -223,9 +222,6 @@ echo nameserver 8.8.8.8 > /etc/resolv.conf
 
 # Gnome
 flatpak remote-add --if-not-exists gnome --from https://sdk.gnome.org/gnome.flatpakrepo
-
-# Kde
-flatpak remote-add --if-not-exists kdeapps --from https://distribute.kde.org/kdeapps.flatpakrepo
 
 # Flathub
 flatpak remote-add --if-not-exists flathub --from https://flathub.org/repo/flathub.flatpakrepo
@@ -262,6 +258,9 @@ flatpak install -y dapperlinux org.gnome.Evolution
 # Eye of Gnome
 flatpak install -y flathub org.gnome.eog
 
+# Feed Reader
+flatpak install -y flathub org.gnome.FeedReader
+
 # Firefox
 flatpak install -y dapperlinux org.mozilla.Firefox
 
@@ -281,7 +280,7 @@ flatpak install -y dapperlinux org.gnome.Music
 flatpak install -y flathub org.inkscape.Inkscape
 
 # Krita
-flatpak install -y kdeapps org.kde.krita
+flatpak install -y flathub org.kde.krita
 
 # Libreoffice
 flatpak install -y flathub org.libreoffice.LibreOffice
