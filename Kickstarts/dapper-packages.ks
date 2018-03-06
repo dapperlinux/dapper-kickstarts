@@ -12,6 +12,7 @@ dnssec-trigger-panel
 firewall-config
 gconf-editor
 gnome-tweak-tool
+grub2-efi
 gtk-murrine-engine
 numix-icon-theme-circle
 seahorse
