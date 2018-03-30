@@ -98,6 +98,10 @@ FOE
 
 # Set Our Favourite Apps for Gnome-Shell and Enable Extensions
 
+# Delete old gschema override
+rm /usr/share/glib-2.0/schemas/org.gnome.shell.gschema.override
+
+# Make new gschema override
 cat >> /usr/share/glib-2.0/schemas/95_org.gnome.shell.gschema.override << FOE
 [org.gnome.shell]
 enabled-extensions=['user-theme@gnome-shell-extensions.gcampax.github.com', 'mediaplayer@patapon.info']

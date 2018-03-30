@@ -168,7 +168,6 @@ dapper-selinux-policy
 
 # Remove Standard Installer
 -anaconda
--@anaconda-tools
 
 # Remove Applications to be Replaced with Flatpaks
 
@@ -214,6 +213,9 @@ dapper-selinux-policy
 
 # Really Remove Libreoffice
 dnf remove -y libreoffice-core libreoffice-calc libreoffice-draw libreoffice-impress libreoffice-writer
+
+# Really Remove Anaconda
+dnf remove -y anaconda
 
 # DHCP Client info to use hostnames to lookup flatpak remotes
 echo nameserver 8.8.8.8 > /etc/resolv.conf
@@ -277,7 +279,7 @@ flatpak install -y flathub org.gnome.Builder
 flatpak install -y flathub org.gnome.Calculator
 
 # Gnome-Music
-flatpak install -y dapperlinux org.gnome.Music
+flatpak install -y flathub org.gnome.Music
 
 # Inkscape
 flatpak install -y flathub org.inkscape.Inkscape
@@ -296,7 +298,6 @@ flatpak install -y flathub org.libreoffice.LibreOffice
 flatpak install -y flathub org.gnome.Polari
 
 # Scribus
-#flatpak install -y --from http://drjurf.tk/scribus-flatpak/scribus-nightly.flatpakref
 
 # Totem
 flatpak install -y flathub org.gnome.Totem
