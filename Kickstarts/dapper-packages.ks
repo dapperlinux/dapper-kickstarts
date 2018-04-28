@@ -8,7 +8,6 @@
 calamares
 dconf-editor
 dnssec-trigger
-dnssec-trigger-panel
 firewall-config
 gconf-editor
 gnome-tweak-tool
@@ -26,6 +25,7 @@ flatpak-builder
 xdg-desktop-portal
 
 # Graphical Applications
+liferea
 lyx
 pdfshuffler
 
@@ -139,7 +139,7 @@ dapper-selinux-policy
 # ---------------------------------------------
 
 # Remove Upstream Branding Per Remix Regulations
--f26-backgrounds-gnome
+-f27-backgrounds-gnome
 -fedora-logos
 -fedora-logos-httpd
 -fedora-release
@@ -193,7 +193,7 @@ dapper-selinux-policy
 -totem-nautilus
 
 # Dapper Linux Extras
--feedreader
+-dnssec-trigger-panel
 -gimp
 -gnome-builder
 -gnome-music
@@ -203,6 +203,7 @@ dapper-selinux-policy
 #-pdfshuffler
 -polari
 -scribus
+-thunderbird
 -transmission-gtk
 -vlc
 
@@ -224,9 +225,6 @@ echo nameserver 8.8.8.8 > /etc/resolv.conf
 # Flatpak Remotes
 # ---------------------------------------------
 
-# Gnome
-flatpak remote-add --if-not-exists gnome --from https://sdk.gnome.org/gnome.flatpakrepo
-
 # Flathub
 flatpak remote-add --if-not-exists flathub --from https://flathub.org/repo/flathub.flatpakrepo
 
@@ -238,8 +236,8 @@ flatpak remote-add --if-not-exists dapperlinux --from https://download.dapperlin
 # ---------------------------------------------
 
 # Gnome Runtimes
-flatpak install gnome org.gnome.Platform 3.26
-flatpak install gnome org.gnome.Sdk 3.26
+flatpak install flathub org.gnome.Platform 3.26
+flatpak install flathub org.gnome.Sdk 3.26
 
 # ---------------------------------------------
 # Flatpak Applications
@@ -254,14 +252,8 @@ flatpak install -y dapperlinux com.dapperlinux.Dapper-Hardened-Browser
 # Evince
 flatpak install -y flathub org.gnome.Evince
 
-# Evolution
-flatpak install -y dapperlinux org.gnome.Evolution
-
 # Eye of Gnome
 flatpak install -y flathub org.gnome.eog
-
-# Feed Reader
-flatpak install -y flathub org.gnome.FeedReader
 
 # Firefox
 flatpak install -y dapperlinux org.mozilla.Firefox
@@ -299,8 +291,8 @@ flatpak install -y flathub org.gnome.Polari
 
 # Scribus
 
-# Totem
-flatpak install -y flathub org.gnome.Totem
+# Thunderbird
+flatpak install -y flathub org.mozilla.Thunderbird
 
 # Transmission
 flatpak install -y flathub com.transmissionbt.Transmission
