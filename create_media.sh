@@ -6,9 +6,9 @@
 
 # Variables
 project=Dapper-Linux
-version=27
-location=./Kickstarts/dapper-live.ks
-flatfile=./Kickstarts/dapper-live-flat.ks
+version=28
+location=./Kickstarts/dapper-live-workstation.ks
+flatfile=./Kickstarts/dapper-live-workstation-flat.ks
 builddir=/var/dapper
 name=Dapper-Linux-Live
 DATE=`date +%Y-%m-%d`
