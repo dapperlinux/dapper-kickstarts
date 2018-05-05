@@ -139,7 +139,7 @@ dapper-selinux-policy
 # ---------------------------------------------
 
 # Remove Upstream Branding Per Remix Regulations
--f27-backgrounds-gnome
+-f28-backgrounds-gnome
 -fedora-logos
 -fedora-logos-httpd
 -fedora-release
@@ -236,8 +236,8 @@ flatpak remote-add --if-not-exists dapperlinux --from https://download.dapperlin
 # ---------------------------------------------
 
 # Gnome Runtimes
-flatpak install flathub org.gnome.Platform 3.26
-flatpak install flathub org.gnome.Sdk 3.26
+flatpak install flathub org.gnome.Platform 3.28
+flatpak install flathub org.gnome.Sdk 3.28
 
 # ---------------------------------------------
 # Flatpak Applications
