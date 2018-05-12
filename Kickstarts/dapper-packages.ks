@@ -37,8 +37,8 @@ elinks
 fortune-mod
 fuse-sshfs
 golang
-java-9-openjdk
-java-9-openjdk-devel
+java-openjdk
+java-openjdk-devel
 libvpx
 most
 nano
