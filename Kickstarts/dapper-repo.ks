@@ -7,8 +7,8 @@
 # ---------------------------------------------
 
 
-repo --name="Dapper Linux Primary" --baseurl=https://copr-be.cloud.fedoraproject.org/results/dapperlinux/Primary/fedora-$releasever-$basearch/ --cost=10
-repo --name="Dapper Linux Kernel" --baseurl=https://copr-be.cloud.fedoraproject.org/results/dapperlinux/kernel/fedora-27-$basearch/ --cost=10
+repo --name="Dapper Linux Primary" --baseurl=https://copr-be.cloud.fedoraproject.org/results/dapperlinux/Primary/fedora-$releasever-$basearch/
+repo --name="Dapper Linux Kernel" --baseurl=https://copr-be.cloud.fedoraproject.org/results/dapperlinux/kernel/fedora-27-$basearch/
 
 
 # ---------------------------------------------
