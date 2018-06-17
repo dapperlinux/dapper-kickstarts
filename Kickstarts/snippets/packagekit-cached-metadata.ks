@@ -42,6 +42,9 @@ fi
 if [ -f /etc/yum.repos.d/dapperlinux-Primary.repo ] ; then
   cp -v /etc/yum.repos.d/dapperlinux-Primary.repo $PK_PREFIX/etc/yum.repos.d/
 fi
+if [ -f /etc/yum.repos.d/dapperlinux-kernel.repo ] ; then
+  cp -v /etc/yum.repos.d/dapperlinux-kernel.repo $PK_PREFIX/etc/yum.repos.d/
+fi
 
 
 # RPM Fusion Repos
