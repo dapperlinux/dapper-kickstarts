@@ -31,6 +31,7 @@ pdfshuffler
 
 # Terminal Applications
 ack
+cargo
 chkrootkit
 cowsay
 elinks
@@ -112,6 +113,12 @@ paxctl
 paxctld-systemd
 paxtest
 
+# Dracut
+dapper-dracut
+dapper-dracut-config-rescue
+dapper-dracut-live
+dapper-dracut-network
+
 # Dark Shell Theme
 dapper-dark
 
@@ -152,6 +159,15 @@ dapper-selinux-policy
 -kernel-core
 -kernel-modules
 -kernel-modules-extra
+
+# Remove Standard Dracut
+-dracut
+-dracut-caps
+-dracut-config
+-dracut-config-rescue
+-dracut-live
+-dracut-network
+-dracut-tools
 
 # Remove Unnecessary packages
 -cheese

@@ -16,6 +16,9 @@ DATE=`date +%Y-%m-%d`
 # Copy Base Install Class to PyAnaconda Location
 cp dapperlinux.py /usr/lib64/python3.6/site-packages/pyanaconda/installclasses/
 
+# Patch pylorax to Accept dapper-dracut-live for dracut-live
+sed -i "s/dracut-live/dapper-dracut-live/g" /usr/lib/python3.6/site-packages/pylorax/creator.py
+
 # Remove Previous Logfiles
 rm livemedia.log
 rm program.log
