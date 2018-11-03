@@ -3,6 +3,8 @@
 %include dapper-packages.ks
 %include dapper-settings.ks
 
+part / --size 14000 --fstype ext4
+
 %packages
 
 

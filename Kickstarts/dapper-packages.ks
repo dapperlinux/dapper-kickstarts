@@ -35,8 +35,10 @@ cargo
 chkrootkit
 cowsay
 elinks
+figlet
 fortune-mod
 fuse-sshfs
+gem
 golang
 java-openjdk
 java-openjdk-devel
@@ -46,8 +48,11 @@ nano
 nasm
 php
 rkhunter
+ruby
+ruby-devel
 rust
 strace
+toilet
 tripwire
 vim-enhanced
 @c-development
@@ -176,6 +181,7 @@ dapper-selinux-policy
 -gnome-contacts
 -gnome-documents
 -gnome-maps
+-gnome-photos
 -gnome-todo
 -gnome-weather
 -rhythmbox
@@ -199,14 +205,17 @@ dapper-selinux-policy
 -gedit
 -gnome-calculator
 -grilo-plugins
+-kdump-anaconda-addon
 -@libreoffice
 -libreoffice-calc
 -libreoffice-core
 -libreoffice-draw
 -libreoffice-impress
 -libreoffice-writer
+-libreoffice-pyuno
 -totem
 -totem-nautilus
+-unoconv
 
 # Dapper Linux Extras
 -dnssec-trigger-panel
@@ -309,6 +318,7 @@ flatpak install -y flathub org.gnome.Polari
 
 # Thunderbird
 flatpak install -y flathub org.mozilla.Thunderbird
+flatpak update -y --commit=56f777252f901346eaeb5ddebd56438b19965079866026aa93237d7589f3538d org.mozilla.Thunderbird
 
 # Transmission
 flatpak install -y flathub com.transmissionbt.Transmission

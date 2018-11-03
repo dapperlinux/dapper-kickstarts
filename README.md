@@ -7,7 +7,7 @@ The Dapper Kickstarts repository contains all of the kickstart files needed to b
 ## Building Dapper Linux
 
 ### Install a Build Virtual Machine
-It is HIGHLY recommended that you build Dapper Linux in a virtual machine, and the virtual machine MUST match the version of Dapper Linux that you are building. For example, if you want to build Dapper Linux 28, start a Fedora 28 virtual machine, and install Fedora 28 to the VM. 
+It is HIGHLY recommended that you build Dapper Linux in a virtual machine, and the virtual machine MUST match the version of Dapper Linux that you are building. For example, if you want to build Dapper Linux 29, start a Fedora 29 virtual machine, and install Fedora 29 to the VM. 
 
 Do not use the virtual machine for anything special, as the build process can be destructive if any bugs arise in anaconda. 
 
@@ -41,14 +41,14 @@ If you examine the contents of create_media.sh, you will find it automates every
 ```bash
 $ sudo ./create_media.sh
 ```
-If the build succeeds, an ISO image called Dapper-Linux-Live-28.iso will be placed in the ~/DapperLinux/Distribution/dapper-kickstarts folder. If the build fails, read the anaconda logs to find out what went wrong and bugfix as necessary.
+If the build succeeds, an ISO image called Dapper-Linux-Live-29.iso will be placed in the ~/DapperLinux/Distribution/dapper-kickstarts folder. If the build fails, read the anaconda logs to find out what went wrong and bugfix as necessary.
 
 ### Build a Server Image
 If you examine the contents of create_server.sh, you will also find it automates everything, so go ahead and run it. Note, you may need to comment out the updates repo in dapper-repos.ks
 ```bash
 $ sudo ./create_server.sh
 ```
-If the build succeeds, and ISO image called Dapper-Linux-Server-28.iso will be placed in ~/DapperLinux/Distribution/dapper-kickstarts folder. If the build fails, read the pungi logs to find out what went wrong and bugfix as necessary.
+If the build succeeds, and ISO image called Dapper-Linux-Server-29.iso will be placed in ~/DapperLinux/Distribution/dapper-kickstarts folder. If the build fails, read the pungi logs to find out what went wrong and bugfix as necessary.
 
 ## Notes
 The build system will likely be moving to a mock based system to match upstream. This will hopefully eliminate the need to create a virtual machine. These instructions will be updated once the buildsystem has been upgraded.

@@ -6,7 +6,7 @@
 
 # Variables
 project=Dapper-Linux
-version=28
+version=29
 location=./Kickstarts/dapper-live-workstation.ks
 flatfile=./Kickstarts/dapper-live-workstation-flat.ks
 builddir=/var/dapper
@@ -14,10 +14,10 @@ name=Dapper-Linux-Live
 DATE=`date +%Y-%m-%d`
 
 # Copy Base Install Class to PyAnaconda Location
-cp dapperlinux.py /usr/lib64/python3.6/site-packages/pyanaconda/installclasses/
+cp dapperlinux.py /usr/lib64/python3.7/site-packages/pyanaconda/installclasses/
 
 # Patch pylorax to Accept dapper-dracut-live for dracut-live
-sed -i "s/dracut-live/dapper-dracut-live/g" /usr/lib/python3.6/site-packages/pylorax/creator.py
+sed -i "s/dracut-live/dapper-dracut-live/g" /usr/lib/python3.7/site-packages/pylorax/creator.py
 
 # Remove Previous Logfiles
 rm livemedia.log

@@ -6,7 +6,7 @@
 
 # Variables
 project=Dapper-Linux
-version=28
+version=29
 variant=Server
 name=$project-$variant
 arch=x86_64
@@ -33,8 +33,8 @@ setenforce 0
 ksflatten --config $location --output $flatfile
 
 # Copy Base Install Class to PyAnaconda Location
-mkdir -p work/$variant/$arch/installtree/usr/lib64/python3.6/site-packages/pyanaconda/installclasses/
-cp dapperlinux.py work/$variant/$arch/installtree/usr/lib64/python3.6/site-packages/pyanaconda/installclasses/
+mkdir -p work/$variant/$arch/installtree/usr/lib64/python3.7/site-packages/pyanaconda/installclasses/
+cp dapperlinux.py work/$variant/$arch/installtree/usr/lib64/python3.7/site-packages/pyanaconda/installclasses/
 
 # Create ISO image
 pungi --config $flatfile --name $name --family $project --flavor $variant --ver $version --bugurl $bugurl --nosource --nodebuginfo --isfinal
